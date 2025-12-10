@@ -71,7 +71,6 @@ function SubmitPage() {
         fields: normalizedFields
       };
 
-      console.log('Submitting payload:', payload);
       const response = await submitSignedPDF(payload);
 
       setResult(response);

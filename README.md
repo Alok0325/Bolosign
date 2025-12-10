@@ -302,25 +302,32 @@ npm test
 
 ## 🚢 Deployment
 
+### Current Production Setup
+
+**Backend (Render):** https://bolosign-ug0m.onrender.com
+**Frontend:** Configure to use the Render backend URL
+
 ### Frontend Deployment (Vercel)
 
 1. Push code to GitHub
 2. Go to [vercel.com](https://vercel.com) and import repository
 3. Vercel auto-detects `vercel.json` configuration
 4. Set environment variable:
-   - `VITE_API_BASE_URL`: `https://your-backend-url.com`
+   - `VITE_API_BASE_URL`: `https://bolosign-ug0m.onrender.com`
 5. Deploy
 
 **Automatic Deployments:** Every push to `main` branch triggers deployment
 
-### Backend Deployment (Render)
+### Backend Deployment (Render) ✅ DEPLOYED
+
+**Current URL:** https://bolosign-ug0m.onrender.com
 
 1. Push code to GitHub
 2. Go to [render.com](https://render.com) and create Web Service
 3. Connect repository (Render auto-detects `render.yaml`)
 4. Set environment variables:
    - `MONGODB_URI`: MongoDB Atlas connection string
-   - `CORS_ORIGIN`: `https://your-frontend-url.vercel.app`
+   - `CORS_ORIGIN`: `*` (or specific frontend URL)
    - `PORT`: `5000`
    - `UPLOAD_DIR`: `./uploads`
    - `MAX_FILE_SIZE`: `10485760`
