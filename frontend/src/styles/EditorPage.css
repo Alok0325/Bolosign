@@ -1,0 +1,140 @@
+.editor-page {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.editor-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editor-header h2 {
+  color: #333;
+  margin: 0;
+}
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-nav-button {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.page-nav-button:hover:not(:disabled) {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.page-nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.next-button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.next-button:hover {
+  background-color: #45a049;
+}
+
+.editor-content {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  min-height: 600px;
+}
+
+.field-palette-container {
+  flex-shrink: 0;
+  width: 240px;
+}
+
+.pdf-workspace {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.pdf-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.field-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.field-canvas-overlay .draggable-field {
+  pointer-events: all;
+}
+
+.editor-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.editor-empty h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.editor-empty p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.editor-empty button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.editor-empty button:hover {
+  background-color: #45a049;
+}

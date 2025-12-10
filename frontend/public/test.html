@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF.js Test</title>
+</head>
+<body>
+    <h1>PDF.js Worker Test</h1>
+    <div id="status">Testing PDF.js worker...</div>
+    <canvas id="pdf-canvas"></canvas>
+    
+    <script type="module">
+        import * as pdfjsLib from '/node_modules/pdfjs-dist/build/pdf.min.mjs';
+        
+        // Set worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
+        
+        const status = document.getElementById('status');
+        
+        try {
+            // Test if worker loads
+            status.textContent = 'Worker configured successfully!';
+            console.log('PDF.js version:', pdfjsLib.version);
+            console.log('Worker source:', pdfjsLib.GlobalWorkerOptions.workerSrc);
+        } catch (error) {
+            status.textContent = 'Error: ' + error.message;
+            console.error('PDF.js error:', error);
+        }
+    </script>
+</body>
+</html>

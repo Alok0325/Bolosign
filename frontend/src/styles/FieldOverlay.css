@@ -1,0 +1,206 @@
+.field-palette {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.field-palette h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.field-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.field-button:hover {
+  background-color: #e8f5e9;
+  border-color: #4CAF50;
+}
+
+.field-icon {
+  font-size: 1.5rem;
+}
+
+.field-label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.field-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.loading-message {
+  color: #666;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.field-list {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.field-list h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.field-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+.field-item-type {
+  font-size: 0.85rem;
+  color: #495057;
+  text-transform: capitalize;
+}
+
+.field-item-remove {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-item-remove:hover {
+  background-color: #c82333;
+}
+
+.draggable-field {
+  border: 2px solid #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.draggable-field:hover {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.field-signature {
+  border-color: #2196F3;
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.field-text {
+  border-color: #FF9800;
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.field-date {
+  border-color: #9C27B0;
+  background-color: rgba(156, 39, 176, 0.1);
+}
+
+
+
+.field-image {
+  border-color: #00BCD4;
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+.field-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.field-type-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.field-remove {
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.field-remove:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .field-overlay {
+    flex-direction: column;
+  }
+
+  .field-palette {
+    width: 100%;
+  }
+
+  .field-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .field-button {
+    flex: 1;
+    min-width: 100px;
+  }
+}

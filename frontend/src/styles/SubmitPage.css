@@ -1,0 +1,153 @@
+.submit-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.submit-status {
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 24px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.submit-status h2 {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.submit-status p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.success-icon,
+.error-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 24px;
+}
+
+.success-icon {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+
+.error-icon {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.result-details {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.result-details h3 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #333;
+  word-break: break-all;
+  background-color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.submit-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.submit-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.download-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.download-button:hover {
+  background-color: #45a049;
+}
+
+.new-doc-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.new-doc-button:hover {
+  background-color: #1976D2;
+}
+
+.submit-status.error .submit-actions button:first-child {
+  background-color: #f44336;
+  color: white;
+}
+
+.submit-status.error .submit-actions button:first-child:hover {
+  background-color: #d32f2f;
+}
+
+.submit-status.error .submit-actions button:last-child {
+  background-color: #757575;
+  color: white;
+}
+
+.submit-status.error .submit-actions button:last-child:hover {
+  background-color: #616161;
+}
