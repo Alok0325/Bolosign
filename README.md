@@ -302,12 +302,15 @@ npm test
 
 ## 🚢 Deployment
 
-### Current Production Setup
+### Current Production Setup ✅ LIVE
 
+**Frontend (Vercel):** https://bolosign-5aru.vercel.app/
 **Backend (Render):** https://bolosign-ug0m.onrender.com
-**Frontend:** Configure to use the Render backend URL
+**Database:** MongoDB Atlas
 
-### Frontend Deployment (Vercel)
+### Frontend Deployment (Vercel) ✅ DEPLOYED
+
+**Live URL:** https://bolosign-5aru.vercel.app/
 
 1. Push code to GitHub
 2. Go to [vercel.com](https://vercel.com) and import repository
