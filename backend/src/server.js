@@ -9,8 +9,32 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Configure CORS to handle multiple origins
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3001', 
+  'https://bolosign-5aru.vercel.app'
+];
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000'
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    // Check if the origin is in our allowed list
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    
+    // If CORS_ORIGIN is set in environment, use that as well
+    if (process.env.CORS_ORIGIN && origin === process.env.CORS_ORIGIN) {
+      return callback(null, true);
+    }
+    
+    const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+    return callback(new Error(msg), false);
+  },
+  credentials: true
 }));
 
 app.use(express.json({ limit: '50mb' }));
