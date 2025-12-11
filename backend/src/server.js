@@ -11,8 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // Configure CORS to handle multiple origins
 const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:3001', 
+  'http://localhost:3000', 
   'https://bolosign-5aru.vercel.app'
 ];
 
